@@ -1,0 +1,33 @@
+{% extends "basefront.html.twig" %}
+{% block body %}
+    <div class="row mt-3">
+        <div class="col">
+            <!-- emplacement de la vidéo -->
+            {% if formation.videoid %}
+                <div style="width: 560px; height: 315px; float: none; clear: both; margin: 2px auto;">
+                  <embed
+                    src="https://www.youtube.com/embed/{{ formation.videoid }}" 
+                    wmode="transparent"
+                    type="video/mp4"
+                    width="100%" height="100%"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    title="YouTube video player"
+                  >
+                </div>                                             
+            {% endif %}
+        </div>
+        <div class="col">
+            {{ formation.publishedatstring }}
+            <h4 class="text-info mt-5">{{ formation.title }}</h4>
+            <strong>playlist : </strong>{{ formation.playlist.name }}<br />
+            <strong>catégories : </strong>
+                {% for categorie in formation.categories %}
+                    {{ categorie.name }}&nbsp;
+                {% endfor %}
+            <br /><br />
+            <strong>description :</strong><br />
+                {{ formation.description|nl2br }}
+        </div>
+    </div>
+{% endblock %}

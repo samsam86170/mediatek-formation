@@ -1,0 +1,41 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{% endblock %}
+{% block stylesheets %}{% endblock %}
+{% block top %}
+    <div class="container">
+        <!-- titre -->
+        <div class="text-left">
+            <img src="{{ app.request.getBasePath()~'/banniere.jpg' }}" >
+        </div>
+        <!-- menu -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('accueil') }}">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('formations') }}">Formations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('playlists') }}">Playlists</a>
+                    </li>                    
+                </ul>
+            </div>
+        </nav>        
+    </div>
+{% endblock %}
+{% block body %}{% endblock %}
+{% block footer %}
+    <div class="container text-center">
+        <footer>
+            <hr>
+            <p><small><i>
+                Consultez nos <a class="link-secondary" href="{{ path('cgu') }}">Conditions Générales d'Utilisation</a>
+            </i></small></p>
+            
+        </footer>
+    </div>
+{% endblock %}
+{% block javascripts %}{% endblock %}
