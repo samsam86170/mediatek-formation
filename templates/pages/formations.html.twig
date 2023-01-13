@@ -1,6 +1,7 @@
 {% extends "basefront.html.twig" %}
 {% block body %}
     <table class="table table-striped">
+        <caption></caption>
         <thead>
             <tr>
                 <th class="text-left align-top" scope="col">
@@ -77,7 +78,7 @@
                     <td class="text-center">
                         {% if formation.miniature %}
                             <a href="{{ path('formations.showone', {id:formation.id}) }}">
-                                <img src="{{ formation.miniature }}">
+                                <img src="{{ formation.miniature }}" alt="image réduite de formation">
                             </a>
                         {% endif %}
                     </td>
