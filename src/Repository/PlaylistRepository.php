@@ -52,24 +52,17 @@ class PlaylistRepository extends ServiceEntityRepository
     }
     
     /**
-     * Retourne toutes les playlists triées sur un champ
-     * @param type $champ
+     * Retourne toutes les playlists triées sur le nom de la playlist
      * @param type $ordre
      * @return Playlist[]
      */
-    public function findAllOrderBy($champ, $ordre): array{
+    public function findAllOrderByName($ordre): array{
         return $this->createQueryBuilder('p')
-                ->select(PIDID)
-                ->addSelect(PNAMENAME)
-                ->addSelect(CNCATEGORIENAME)
                 ->leftjoin(PFORMATIONS, 'f')
-                ->leftjoin(FCATEGORIES, 'c')
                 ->groupBy('p.id')
-                ->addGroupBy(CNAME)
-                ->orderBy('p.'.$champ, $ordre)
-                ->addOrderBy(CNAME)
+                ->orderBy('p.name', $ordre)
                 ->getQuery()
-                ->getResult();       
+                ->getResult(); 
     }
 
     /**
@@ -81,20 +74,14 @@ class PlaylistRepository extends ServiceEntityRepository
     */
     public function findByContainValue($champ, $valeur): array{
         if($valeur==""){
-            return $this->findAllOrderBy('name','ASC');
+            return $this->findAllOrderByName('ASC');
         }
         return $this->createQueryBuilder('p')
-            ->select(PIDID)
-            ->addSelect(PNAMENAME)
-            ->addSelect(CNCATEGORIENAME)
             ->leftjoin(PFORMATIONS, 'f')
-            ->leftjoin(FCATEGORIES, 'c')
             ->where('p.'.$champ.' LIKE :valeur')
             ->setParameter('valeur', '%'.$valeur.'%')
             ->groupBy('p.id')
-            ->addGroupBy(CNAME)
             ->orderBy('p.name', 'ASC')
-            ->addOrderBy(CNAME)
             ->getQuery()
             ->getResult(); 
     }
@@ -109,22 +96,32 @@ class PlaylistRepository extends ServiceEntityRepository
      */
     public function findByContainValueTable($champ, $valeur, $table): array{
         if($valeur==""){
-            return $this->findAllOrderBy('name', 'ASC');
+            return $this->findAllOrderByName('ASC');
         }
         return $this->createQueryBuilder('p')
-            ->select(PIDID)
-            ->addSelect(PNAMENAME)
-            ->addSelect(CNCATEGORIENAME)
             ->leftjoin(PFORMATIONS, 'f')
             ->leftjoin(FCATEGORIES, 'c')
+            ->where('c.'.$champ.' LIKE :valeur')
             ->setParameter('valeur', '%'.$valeur.'%')
             ->groupBy('p.id')                
-            ->where('c.'.$champ.' LIKE :valeur')
             ->orderBy('p.name', 'ASC')
-            ->addOrderBy(CNAME)
             ->getQuery()
             ->getResult();
         
+    }
+    
+    /**
+     * Retourne toutes les playlists triées sur le nombre de formations     
+     * @param type $ordre
+     * @return Playlist[]
+     */
+    public function findAllOrderByNbFormations($ordre): array{
+        return $this->createQueryBuilder('p')                
+                ->leftjoin(PFORMATIONS, 'f')               
+                ->groupBy('p.id')             
+                ->orderBy('count(p.name)', $ordre)                
+                ->getQuery()
+                ->getResult();       
     }
           
 }

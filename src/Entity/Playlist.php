@@ -96,4 +96,20 @@ class Playlist
         return $this;
     }
     
+    /**
+     *  @return Collection<int, string>
+     */
+    public function getCategoriesPlaylist() : Collection
+    {
+        $categories = new ArrayCollection ();
+        foreach ($this->formations as $formation){
+            $categoriesFormation = $formation->getCategories();
+            foreach($categoriesFormation as $categorieFormation){
+                if(!$categories->contains($categorieFormation->getName())){
+                    $categories[] = $categorieFormation->getName();
+                }
+            }
+        }
+        return $categories;
+    }
 }
