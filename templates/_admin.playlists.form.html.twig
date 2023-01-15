@@ -1,0 +1,21 @@
+{{ form_start(formplaylist) }}
+    <div class="row">
+            <div class="col">             
+                <div class="row">
+                    <div class="col-auto">
+                        {{ form_row(formplaylist.name) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(formplaylist.description) }}
+                    </div>
+                    <div class="col">
+                        {{ form_row(formplaylist.formations) }}
+                    </div>
+
+                    <div class="col">
+                        {{ form_row(formplaylist.submit) }}
+                    </div>  
+                </div>
+            </div>
+    </div>
+{{ form_end(formplaylist) }}
