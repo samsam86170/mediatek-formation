@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use const PLAYLISTSPATH;
 
 define("PLAYLISTSPATH", "pages/playlists.html.twig");
 /**
@@ -80,7 +81,11 @@ class PlaylistsController extends AbstractController {
      */
     public function findAllContain($champ, Request $request, $table=""): Response{
         $valeur = $request->get("recherche");
-        $playlists = $this->playlistRepository->findByContainValue($champ, $valeur, $table);
+        if ($table != ""){
+        $playlists = $this->playlistRepository->findByContainValueTable($champ, $valeur, $table);
+        }else{
+            $playlists = $this->playlistRepository->findByContainValue($champ, $valeur);
+        }
         $categories = $this->categorieRepository->findAll();
         return $this->render(PLAYLISTSPATH, [
             'playlists' => $playlists,

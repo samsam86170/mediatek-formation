@@ -95,4 +95,5 @@ class Playlist
         }
         return $this;
     }
+    
 }

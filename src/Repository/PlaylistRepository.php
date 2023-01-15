@@ -5,6 +5,12 @@ namespace App\Repository;
 use App\Entity\Playlist;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use const CNAME;
+use const CNCATEGORIENAME;
+use const FCATEGORIES;
+use const PFORMATIONS;
+use const PIDID;
+use const PNAMENAME;
 
 define("PIDID", "p.id id");
 define("PNAMENAME", "p.name name");
@@ -67,51 +73,58 @@ class PlaylistRepository extends ServiceEntityRepository
     }
 
     /**
+    * Enregistrements dont un champ contient une valeur
+    * ou tous les enregistrements si la valeur est vide
+    * @param type $champ
+    * @param type $valeur
+    * @return array
+    */
+    public function findByContainValue($champ, $valeur): array{
+        if($valeur==""){
+            return $this->findAllOrderBy('name','ASC');
+        }
+        return $this->createQueryBuilder('p')
+            ->select(PIDID)
+            ->addSelect(PNAMENAME)
+            ->addSelect(CNCATEGORIENAME)
+            ->leftjoin(PFORMATIONS, 'f')
+            ->leftjoin(FCATEGORIES, 'c')
+            ->where('p.'.$champ.' LIKE :valeur')
+            ->setParameter('valeur', '%'.$valeur.'%')
+            ->groupBy('p.id')
+            ->addGroupBy(CNAME)
+            ->orderBy('p.name', 'ASC')
+            ->addOrderBy(CNAME)
+            ->getQuery()
+            ->getResult(); 
+    }
+    
+    /**
      * Enregistrements dont un champ contient une valeur
-     * ou tous les enregistrements si la valeur est vide
+     * Et "table" en paramètre
      * @param type $champ
      * @param type $valeur
-     * @param type $table si $champ dans une autre table
-     * @return Playlist[]
+     * @param type $table
+     * @return array
      */
-    public function findByContainValue($champ, $valeur, $table=""): array{
+    public function findByContainValueTable($champ, $valeur, $table): array{
         if($valeur==""){
             return $this->findAllOrderBy('name', 'ASC');
-        }    
-        if($table==""){      
-            return $this->createQueryBuilder('p')
-                    ->select(PIDID)
-                    ->addSelect(PNAMENAME)
-                    ->addSelect(CNCATEGORIENAME)
-                    ->leftjoin(PFORMATIONS, 'f')
-                    ->leftjoin(FCATEGORIES, 'c')
-                    ->where('p.'.$champ.' LIKE :valeur')
-                    ->setParameter('valeur', '%'.$valeur.'%')
-                    ->groupBy('p.id')
-                    ->addGroupBy(CNAME)
-                    ->orderBy('p.name', 'ASC')
-                    ->addOrderBy(CNAME)
-                    ->getQuery()
-                    ->getResult();              
-        }else{   
-            return $this->createQueryBuilder('p')
-                    ->select(PIDID)
-                    ->addSelect(PNAMENAME)
-                    ->addSelect(CNCATEGORIENAME)
-                    ->leftjoin(PFORMATIONS, 'f')
-                    ->leftjoin(FCATEGORIES, 'c')
-                    ->where('c.'.$champ.' LIKE :valeur')
-                    ->setParameter('valeur', '%'.$valeur.'%')
-                    ->groupBy('p.id')
-                    ->addGroupBy(CNAME)
-                    ->orderBy('p.name', 'ASC')
-                    ->addOrderBy(CNAME)
-                    ->getQuery()
-                    ->getResult();              
-            
-        }           
-    }    
-
-
-    
+        }
+        return $this->createQueryBuilder('p')
+            ->select(PIDID)
+            ->addSelect(PNAMENAME)
+            ->addSelect(CNCATEGORIENAME)
+            ->leftjoin(PFORMATIONS, 'f')
+            ->leftjoin(FCATEGORIES, 'c')
+            ->setParameter('valeur', '%'.$valeur.'%')
+            ->groupBy('p.id')                
+            ->where('c.'.$champ.' LIKE :valeur')
+            ->orderBy('p.name', 'ASC')
+            ->addOrderBy(CNAME)
+            ->getQuery()
+            ->getResult();
+        
+    }
+          
 }
