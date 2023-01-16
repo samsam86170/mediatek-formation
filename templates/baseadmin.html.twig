@@ -4,6 +4,9 @@
 {% block stylesheets %}{% endblock %}
 {% block top %}
     <div class="container">
+        <div class="text-end">
+            <a href="{{ path('logout') }}">Se déconnecter</a>
+        </div>
         <!-- titre -->
         <div class="text-left">
             <img src="{{ app.request.getBasePath()~'/banniere.jpg' }}" alt="Image de la bannière">
