@@ -1,0 +1,1070 @@
+{
+  "id": "7e10aeed-8b74-44f5-af27-40a2502445cb",
+  "version": "2.0",
+  "name": "Mediatek-Formation",
+  "url": "http://localhost/mediatek-formation/public/index.php",
+  "tests": [{
+    "id": "6a556cc4-6b76-4609-93ff-06a71d14a285",
+    "name": "Microsoft Edge",
+    "commands": [{
+      "id": "196bde40-9907-4d20-aff4-f1213cafc7b7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/mediatek-formation/public/index.php/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b3fefda-5dac-413a-bff2-1632d93295db",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6f46bd9-aa27-4ff2-8564-9d829be96180",
+      "comment": "",
+      "command": "click",
+      "target": "css=strong:nth-child(2) > .link-info",
+      "targets": [
+        ["css=strong:nth-child(2) > .link-info", "css:finder"],
+        ["xpath=(//a[contains(text(),'Formations')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/mediatek-formation/public/index.php/formations')])[2]", "xpath:href"],
+        ["xpath=//strong/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf96b843-ad83-40e4-97e7-b205e59baa07",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accueil",
+      "targets": [
+        ["linkText=Accueil", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accueil')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Accueil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6da26d2e-cfd3-4a74-9092-69a2fd906c72",
+      "comment": "",
+      "command": "click",
+      "target": "css=strong:nth-child(4) > .link-info",
+      "targets": [
+        ["css=strong:nth-child(4) > .link-info", "css:finder"],
+        ["xpath=(//a[contains(text(),'Playlists')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/mediatek-formation/public/index.php/playlists')])[2]", "xpath:href"],
+        ["xpath=//strong[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8199bb0-934b-43a1-9ab8-dba2891ba545",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accueil",
+      "targets": [
+        ["linkText=Accueil", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accueil')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Accueil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1295228-a2ff-4a32-abdc-42fad7b0b3fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .card-img-top",
+      "targets": [
+        ["css=td:nth-child(1) .card-img-top", "css:finder"],
+        ["xpath=//img[@alt='image réduite de formation']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ec2e769-39ce-4059-bc91-06d505bd585e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accueil",
+      "targets": [
+        ["linkText=Accueil", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accueil')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Accueil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97c9549c-c282-42cb-8284-ef5c7cb3d7ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(2) .card-img-top",
+      "targets": [
+        ["css=td:nth-child(2) .card-img-top", "css:finder"],
+        ["xpath=(//img[@alt='image réduite de formation'])[2]", "xpath:img"],
+        ["xpath=//td[2]/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1243f15-a564-47e1-9528-8aded1557ef0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accueil",
+      "targets": [
+        ["linkText=Accueil", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accueil')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Accueil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e799c794-a11a-41e7-b80f-97899d329972",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Conditions Générales d'Utilisation",
+      "targets": [
+        ["linkText=Conditions Générales d'Utilisation", "linkText"],
+        ["css=.link-secondary", "css:finder"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/cgu')]", "xpath:href"],
+        ["xpath=//small/strong/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3869bf10-11f6-4eea-bb51-2c3bcabd8796",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Formations",
+      "targets": [
+        ["linkText=Formations", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Formations')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Formations')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "649c7844-20fc-4cff-b1fc-2b1c80379cf5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Formations",
+      "targets": [
+        ["linkText=Formations", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Formations')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Formations')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be912819-6d33-4e05-9f61-0fb494fbc6f6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=>",
+      "targets": [
+        ["linkText=>", "linkText"],
+        ["css=.text-left:nth-child(1) > .btn:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'>')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/title/DESC')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'>')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1284d518-7772-4aa7-b4bb-598aa6e6b485",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=<",
+      "targets": [
+        ["linkText=<", "linkText"],
+        ["css=.text-left:nth-child(1) > .btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'<')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/title/ASC')]", "xpath:href"],
+        ["xpath=//th/a", "xpath:position"],
+        ["xpath=//a[contains(.,'<')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7c46fd8-75fb-4a10-9eca-7b9ec8cef73b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(2) > .btn:nth-child(2)",
+      "targets": [
+        ["css=.text-left:nth-child(2) > .btn:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'<')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/name/ASC/playlist')]", "xpath:href"],
+        ["xpath=//th[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0203ed9b-5425-4dac-bf9f-accc3f3c0c76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(2) > .btn:nth-child(3)",
+      "targets": [
+        ["css=.text-left:nth-child(2) > .btn:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(text(),'>')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/name/DESC/playlist')]", "xpath:href"],
+        ["xpath=//th[2]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e661422b-e8fa-40f5-a712-9cb25652606f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .btn:nth-child(2)",
+      "targets": [
+        ["css=.text-center > .btn:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'<')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/publishedAt/ASC')]", "xpath:href"],
+        ["xpath=//th[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25f2c1a9-eb6c-4799-b8ac-3ce60ef4ba5e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .btn:nth-child(3)",
+      "targets": [
+        ["css=.text-center > .btn:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(text(),'>')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/publishedAt/DESC')]", "xpath:href"],
+        ["xpath=//th[4]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2095b4f-9db9-4c89-acaa-a1fb3ddfbaac",
+      "comment": "",
+      "command": "click",
+      "target": "id=recherche",
+      "targets": [
+        ["id=recherche", "id"],
+        ["css=#recherche", "css:finder"],
+        ["xpath=//select[@id='recherche']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e1956f9-51dc-46a8-9f65-7681bfe17ca1",
+      "comment": "",
+      "command": "select",
+      "target": "id=recherche",
+      "targets": [],
+      "value": "label=MCD"
+    }, {
+      "id": "dda6f14e-6bc1-449a-836d-81274959b8a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(2) .sm",
+      "targets": [
+        ["css=.text-left:nth-child(2) .sm", "css:finder"],
+        ["xpath=(//input[@name='recherche'])[2]", "xpath:attributes"],
+        ["xpath=//th[2]/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8716f49-5050-466d-9ccb-895b87162ded",
+      "comment": "",
+      "command": "type",
+      "target": "css=.text-left:nth-child(2) .sm",
+      "targets": [
+        ["css=.text-left:nth-child(2) .sm", "css:finder"],
+        ["xpath=(//input[@name='recherche'])[2]", "xpath:attributes"],
+        ["xpath=//th[2]/form/div/input", "xpath:position"]
+      ],
+      "value": "MCD"
+    }, {
+      "id": "1919bf52-284f-4eef-8845-4e46c4c0dbc3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(2) > .form-inline .btn",
+      "targets": [
+        ["css=.text-left:nth-child(2) > .form-inline .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//th[2]/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed81e81e-7648-4eb6-be49-9105276a4915",
+      "comment": "",
+      "command": "click",
+      "target": "name=recherche",
+      "targets": [
+        ["name=recherche", "name"],
+        ["css=.text-left:nth-child(1) .sm", "css:finder"],
+        ["xpath=//input[@name='recherche']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7a6ff64-bf4b-4508-8ce4-82f390c805d4",
+      "comment": "",
+      "command": "type",
+      "target": "name=recherche",
+      "targets": [
+        ["name=recherche", "name"],
+        ["css=.text-left:nth-child(1) .sm", "css:finder"],
+        ["xpath=//input[@name='recherche']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Python"
+    }, {
+      "id": "ead2c5ef-043e-43cc-bd47-7c5c0fa13e99",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(1) > .form-inline .btn",
+      "targets": [
+        ["css=.text-left:nth-child(1) > .form-inline .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'filtrer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3093a302-4cf0-46ac-a07e-1a943a254d4c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.align-middle:nth-child(1) img",
+      "targets": [
+        ["css=.align-middle:nth-child(1) img", "css:finder"],
+        ["xpath=//img[@alt='image réduite de formation']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cff4118-bc8f-4826-a979-0c81fd37e526",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Formations",
+      "targets": [
+        ["linkText=Formations", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Formations')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Formations')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e83377b8-5bef-4625-97bd-852fc686060e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Playlists",
+      "targets": [
+        ["linkText=Playlists", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Playlists')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Playlists')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed975e38-cad3-4526-a011-f88e78051105",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Playlists",
+      "targets": [
+        ["linkText=Playlists", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Playlists')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Playlists')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3159f05d-4295-4375-8900-6e5cd209732c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=<",
+      "targets": [
+        ["linkText=<", "linkText"],
+        ["css=.text-left > .btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'<')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/tri/name/ASC')]", "xpath:href"],
+        ["xpath=//th/a", "xpath:position"],
+        ["xpath=//a[contains(.,'<')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52b998eb-29b1-4b9f-8ec1-3d78448dd6ce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=>",
+      "targets": [
+        ["linkText=>", "linkText"],
+        ["css=.text-left > .btn:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'>')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/tri/name/DESC')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'>')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d05ee42-210b-4d26-9c2d-0a2e327b0324",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .btn:nth-child(2)",
+      "targets": [
+        ["css=.text-center > .btn:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'<')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/tri/nbformations/ASC')]", "xpath:href"],
+        ["xpath=//th[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5dd1aa22-dfbb-40d4-a6f9-18ba7c5783c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .btn:nth-child(3)",
+      "targets": [
+        ["css=.text-center > .btn:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(text(),'>')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/tri/nbformations/DESC')]", "xpath:href"],
+        ["xpath=//th[3]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33dca42c-6db2-487a-a5d4-456b13b11d16",
+      "comment": "",
+      "command": "click",
+      "target": "id=recherche",
+      "targets": [
+        ["id=recherche", "id"],
+        ["css=#recherche", "css:finder"],
+        ["xpath=//select[@id='recherche']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e2d11b1-7d74-4562-91cf-e844f9b78390",
+      "comment": "",
+      "command": "select",
+      "target": "id=recherche",
+      "targets": [],
+      "value": "label=UML"
+    }, {
+      "id": "9a131f62-356b-4c87-9d3f-a2aa886f5b0a",
+      "comment": "",
+      "command": "click",
+      "target": "name=recherche",
+      "targets": [
+        ["name=recherche", "name"],
+        ["css=.sm", "css:finder"],
+        ["xpath=//input[@name='recherche']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c5cd1b4-2b9e-414a-bb81-038a6be30b7a",
+      "comment": "",
+      "command": "type",
+      "target": "name=recherche",
+      "targets": [
+        ["name=recherche", "name"],
+        ["css=.sm", "css:finder"],
+        ["xpath=//input[@name='recherche']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "python"
+    }, {
+      "id": "a56637ff-f73f-44a1-8877-d6e70b7b6086",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-2:nth-child(3)",
+      "targets": [
+        ["css=.mb-2:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'filtrer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee1c3c2e-ec36-458b-bc0d-40d30119732b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Voir détail",
+      "targets": [
+        ["linkText=Voir détail", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Voir détail')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/playlist/3')]", "xpath:href"],
+        ["xpath=//td[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Voir détail')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5481acdd-6ec1-438b-90f4-d16495557122",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-md-auto img",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-md-auto img", "css:finder"],
+        ["xpath=//img[@alt='image réduite de formation']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18816d97-8ef7-4c8f-bc5b-27f3d9c27909",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Playlists",
+      "targets": [
+        ["linkText=Playlists", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Playlists')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Playlists')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8697521c-0bdd-4140-bfe7-e21bf39b7361",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Playlists",
+      "targets": [
+        ["linkText=Playlists", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Playlists')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Playlists')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfbaab48-fda6-4474-9b2d-9feb0aabf3a7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Gestion",
+      "targets": [
+        ["linkText=Gestion", "linkText"],
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Gestion')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/admin')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gestion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fc0e83e-08c4-4e22-ae66-d46d81f86055",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='kc-form-login']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f60f1b75-381f-4ca2-8be3-d46d522ea4e0",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//form[@id='kc-form-login']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "samantha"
+    }]
+  }, {
+    "id": "c867cc97-6133-43cf-9d50-b09eed12cc65",
+    "name": "Chrome",
+    "commands": [{
+      "id": "6a2c563d-70e1-4358-836d-8bc4dcf400c6",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/mediatek-formation/public/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d06f0040-6303-4e45-8286-048df1244622",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e857b5b-0593-45f7-899f-be2a8d1bedde",
+      "comment": "",
+      "command": "click",
+      "target": "css=strong:nth-child(2) > .link-info",
+      "targets": [
+        ["css=strong:nth-child(2) > .link-info", "css:finder"],
+        ["xpath=(//a[contains(text(),'Formations')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/mediatek-formation/public/index.php/formations')])[2]", "xpath:href"],
+        ["xpath=//strong/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2f1ad15-0632-4551-ae93-27eb30640e62",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accueil",
+      "targets": [
+        ["linkText=Accueil", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accueil')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Accueil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2a00a0a-10c1-4808-84bd-a566df76875b",
+      "comment": "",
+      "command": "click",
+      "target": "css=strong:nth-child(4) > .link-info",
+      "targets": [
+        ["css=strong:nth-child(4) > .link-info", "css:finder"],
+        ["xpath=(//a[contains(text(),'Playlists')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/mediatek-formation/public/index.php/playlists')])[2]", "xpath:href"],
+        ["xpath=//strong[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d21b2e59-d3d0-402b-a413-4e0e0aed2e12",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accueil",
+      "targets": [
+        ["linkText=Accueil", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accueil')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Accueil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "729a6923-2ce0-4da0-b8c5-48a8336a6b21",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(1) .card-img-top",
+      "targets": [
+        ["css=td:nth-child(1) .card-img-top", "css:finder"],
+        ["xpath=//img[@alt='image réduite de formation']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f7f901f-b6f3-45ec-b91a-8136bbd6f8ce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accueil",
+      "targets": [
+        ["linkText=Accueil", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accueil')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Accueil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9cd1040e-6755-41af-b4c9-15e8b975d08a",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(2) .card-img-top",
+      "targets": [
+        ["css=td:nth-child(2) .card-img-top", "css:finder"],
+        ["xpath=(//img[@alt='image réduite de formation'])[2]", "xpath:img"],
+        ["xpath=//td[2]/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c410de6c-ccd4-4b4c-b799-45eb0e0f740d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Accueil",
+      "targets": [
+        ["linkText=Accueil", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Accueil')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Accueil')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0900847f-ef3d-4a26-a67f-027b21031da1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Conditions Générales d'Utilisation",
+      "targets": [
+        ["linkText=Conditions Générales d'Utilisation", "linkText"],
+        ["css=.link-secondary", "css:finder"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/cgu')]", "xpath:href"],
+        ["xpath=//small/strong/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a68eb2f7-e2b2-4fad-bae3-714d75e55e59",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Formations",
+      "targets": [
+        ["linkText=Formations", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Formations')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Formations')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "726e4743-604a-480e-ba39-d6d7c1cbcbbe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=<",
+      "targets": [
+        ["linkText=<", "linkText"],
+        ["css=.text-left:nth-child(1) > .btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'<')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/title/ASC')]", "xpath:href"],
+        ["xpath=//th/a", "xpath:position"],
+        ["xpath=//a[contains(.,'<')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "61007199-ad6f-41cf-bfbc-6be385396324",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=>",
+      "targets": [
+        ["linkText=>", "linkText"],
+        ["css=.text-left:nth-child(1) > .btn:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'>')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/title/DESC')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'>')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "875a98af-28e7-4450-83d0-7291c7776464",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(2) > .btn:nth-child(2)",
+      "targets": [
+        ["css=.text-left:nth-child(2) > .btn:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'<')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/name/ASC/playlist')]", "xpath:href"],
+        ["xpath=//th[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1203980-b566-4934-871c-b7726ad0a7c0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(2) > .btn:nth-child(3)",
+      "targets": [
+        ["css=.text-left:nth-child(2) > .btn:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(text(),'>')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/name/DESC/playlist')]", "xpath:href"],
+        ["xpath=//th[2]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "101d908a-73b8-47e8-a70a-6e12ccfd84b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .btn:nth-child(2)",
+      "targets": [
+        ["css=.text-center > .btn:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'<')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/publishedAt/ASC')]", "xpath:href"],
+        ["xpath=//th[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0771d8d-de35-4d9c-9ece-2283a1ac1b94",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .btn:nth-child(3)",
+      "targets": [
+        ["css=.text-center > .btn:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(text(),'>')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/formations/tri/publishedAt/DESC')]", "xpath:href"],
+        ["xpath=//th[4]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce3c4f55-3754-4e6e-a2e7-837a3c27e16c",
+      "comment": "",
+      "command": "click",
+      "target": "id=recherche",
+      "targets": [
+        ["id=recherche", "id"],
+        ["css=#recherche", "css:finder"],
+        ["xpath=//select[@id='recherche']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce7cda9a-9b2f-4a09-9334-6f486c2e8887",
+      "comment": "",
+      "command": "select",
+      "target": "id=recherche",
+      "targets": [],
+      "value": "label=UML"
+    }, {
+      "id": "407fe663-883a-46a6-a63a-fa7c848f5e80",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(2) .sm",
+      "targets": [
+        ["css=.text-left:nth-child(2) .sm", "css:finder"],
+        ["xpath=(//input[@name='recherche'])[2]", "xpath:attributes"],
+        ["xpath=//th[2]/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47d22b36-3c69-488a-9126-143cce4d9a16",
+      "comment": "",
+      "command": "type",
+      "target": "css=.text-left:nth-child(2) .sm",
+      "targets": [
+        ["css=.text-left:nth-child(2) .sm", "css:finder"],
+        ["xpath=(//input[@name='recherche'])[2]", "xpath:attributes"],
+        ["xpath=//th[2]/form/div/input", "xpath:position"]
+      ],
+      "value": "Eclipse"
+    }, {
+      "id": "55c30d30-f06e-4bad-b5a1-370489a3f70a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(2) > .form-inline .btn",
+      "targets": [
+        ["css=.text-left:nth-child(2) > .form-inline .btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//th[2]/form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a366c35-82a0-4ee8-942a-b59e79c42df8",
+      "comment": "",
+      "command": "click",
+      "target": "name=recherche",
+      "targets": [
+        ["name=recherche", "name"],
+        ["css=.text-left:nth-child(1) .sm", "css:finder"],
+        ["xpath=//input[@name='recherche']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af794f26-4676-44a4-a044-a538d930d8ba",
+      "comment": "",
+      "command": "type",
+      "target": "name=recherche",
+      "targets": [
+        ["name=recherche", "name"],
+        ["css=.text-left:nth-child(1) .sm", "css:finder"],
+        ["xpath=//input[@name='recherche']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "android"
+    }, {
+      "id": "d80b8fb0-52cc-415f-b642-60527ea4eddf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-left:nth-child(1) > .form-inline .btn",
+      "targets": [
+        ["css=.text-left:nth-child(1) > .form-inline .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'filtrer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bbe75e3-732e-443b-8de7-0b6e648ee97f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.align-middle:nth-child(1) img",
+      "targets": [
+        ["css=.align-middle:nth-child(1) img", "css:finder"],
+        ["xpath=//img[@alt='image réduite de formation']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b143d51-c86a-47a5-8d73-2726994fdef5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Playlists",
+      "targets": [
+        ["linkText=Playlists", "linkText"],
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Playlists')]", "xpath:link"],
+        ["xpath=//div[@id='navbarSupportedContent']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Playlists')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "187da30d-bc43-4931-9244-7c169ac1bf46",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=>",
+      "targets": [
+        ["linkText=>", "linkText"],
+        ["css=.text-left > .btn:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'>')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/tri/name/DESC')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'>')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c6c263a-590f-49a4-a0fa-412668ed133c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=<",
+      "targets": [
+        ["linkText=<", "linkText"],
+        ["css=.text-left > .btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'<')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/tri/name/ASC')]", "xpath:href"],
+        ["xpath=//th/a", "xpath:position"],
+        ["xpath=//a[contains(.,'<')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9aa1640e-7ee2-4f5e-9915-fb714ca2e781",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .btn:nth-child(2)",
+      "targets": [
+        ["css=.text-center > .btn:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'<')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/tri/nbformations/ASC')]", "xpath:href"],
+        ["xpath=//th[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb030479-87f6-4bb2-9647-348897b7fd4c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center > .btn:nth-child(3)",
+      "targets": [
+        ["css=.text-center > .btn:nth-child(3)", "css:finder"],
+        ["xpath=(//a[contains(text(),'>')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/tri/nbformations/DESC')]", "xpath:href"],
+        ["xpath=//th[3]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "641c2702-6008-4bc5-8e28-5289d7a52c01",
+      "comment": "",
+      "command": "click",
+      "target": "id=recherche",
+      "targets": [
+        ["id=recherche", "id"],
+        ["css=#recherche", "css:finder"],
+        ["xpath=//select[@id='recherche']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edf29e8b-302e-4204-acc6-44be3cf0245b",
+      "comment": "",
+      "command": "select",
+      "target": "id=recherche",
+      "targets": [],
+      "value": "label=UML"
+    }, {
+      "id": "2354a7a3-16a3-47b6-ac66-407beed60dd6",
+      "comment": "",
+      "command": "click",
+      "target": "name=recherche",
+      "targets": [
+        ["name=recherche", "name"],
+        ["css=.sm", "css:finder"],
+        ["xpath=//input[@name='recherche']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bc974a9-a022-49a4-b626-bb8538b21a9b",
+      "comment": "",
+      "command": "type",
+      "target": "name=recherche",
+      "targets": [
+        ["name=recherche", "name"],
+        ["css=.sm", "css:finder"],
+        ["xpath=//input[@name='recherche']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "UML"
+    }, {
+      "id": "b4d281bf-37a3-4886-b19a-3a96e1e5bcc0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mb-2:nth-child(3)",
+      "targets": [
+        ["css=.mb-2:nth-child(3)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'filtrer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af3e4f5d-f4d2-4f38-b0e0-104404bd081a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Voir détail",
+      "targets": [
+        ["linkText=Voir détail", "linkText"],
+        ["css=.btn-secondary", "css:finder"],
+        ["xpath=//a[contains(text(),'Voir détail')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mediatek-formation/public/index.php/playlists/playlist/24')]", "xpath:href"],
+        ["xpath=//td[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Voir détail')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "167d39de-b2c4-46c8-81b0-f00373ed74ce",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost/mediatek-formation/public/", "http://localhost/mediatek-formation/public/index.php/", "http://localhost/mediatek-formation/public/index.php"],
+  "plugins": []
+}

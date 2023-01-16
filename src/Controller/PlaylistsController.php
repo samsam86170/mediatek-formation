@@ -11,6 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use const PLAYLISTSPATH;
 
 define("PLAYLISTSPATH", "pages/playlists.html.twig");
+
 /**
  * Description of PlaylistsController
  *
@@ -36,9 +37,7 @@ class PlaylistsController extends AbstractController {
      */
     private $categorieRepository;    
     
-    function __construct(PlaylistRepository $playlistRepository, 
-            CategorieRepository $categorieRepository,
-            FormationRepository $formationRespository) {
+    function __construct(PlaylistRepository $playlistRepository, CategorieRepository $categorieRepository,FormationRepository $formationRespository) {
         $this->playlistRepository = $playlistRepository;
         $this->categorieRepository = $categorieRepository;
         $this->formationRepository = $formationRespository;
