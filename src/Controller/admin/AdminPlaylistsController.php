@@ -118,7 +118,8 @@ class AdminPlaylistsController extends AbstractController {
     }
     
     /**
-     * Tri des enregistrements
+     * * Tri des enregistrements selon le nom des playlists
+     * Ou selon le nombre de formations
      * @Route("/admin/playlists/tri/{champ}/{ordre}", name="admin.playlists.sort")
      * @param type $champ
      * @param type $ordre
@@ -141,8 +142,8 @@ class AdminPlaylistsController extends AbstractController {
     }
     
     /**
-     * Tri des enregistrements selon le nom des playlists
-     * Ou selon le nombre de formations
+     * Tri des enregistrements selon $champ $valeur
+     * Et si $table
      * @Route("/admin/playlists/recherche/{champ}/{table}", name="admin.playlists.findallcontain")
      * @param type $champ
      * @param Request $request

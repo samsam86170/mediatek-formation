@@ -1,0 +1,57 @@
+{% extends "baseadmin.html.twig" %}
+
+{% block body %}
+    <h5>Gestion des catégories</h5>
+    {# Création du mini-formulaire permettant l'ajout d'une catégorie #}
+    <th class="text-end align-middle" scope="col">
+        <form class="form-inline mt-1" method="POST" action="{{ path('admin.ajout.categorie') }}">
+            <div class="text-end form-group mr-1 mb-2">
+                <input type="text" class="sm" name="name">
+                <input type="hidden" name="_token" value="{{ csrf_token('filtre_name') }}">
+                    <button type ="submit" class="btn btn-primary mb-2 btn-sm">Ajouter une catégorie</button>
+            </div>
+        </form>
+    </th>
+    
+    <table class="table table-striped">
+        <caption></caption>
+        <thead>  
+            <tr>
+                <th class="text-left align-top" scope="col">
+                    Catégories<br>
+                    <a href="{{ path('admin.categories.sort', {champ:'name', ordre:'ASC'}) }}" class="btn btn-info btn-sm active" role="button" aria-pressed="true"><</a>
+                    <a href="{{ path('admin.categories.sort', {champ:'name', ordre:'DESC'})}}" class="btn btn-info btn-sm active" role="button" aria-pressed="true">></a>
+                </th>
+                <th class="text-left align-top" scope="col">
+                    Formations <br>
+                </th>
+                <th class="text-left align-top" scope="col">
+                    Suppression <br>
+                </th>
+            </tr>
+        </thead>
+        
+        <tbody>  
+           {# Boucle qui affiche la liste des catégories et de leurs formations #}
+            <option value=""></option>
+                {% for categorie in categories %}
+                    <tr class="align-middle">
+                    <td>
+                        <h5 class="text-info">
+                            {{ categorie.name }}
+                        </h5>
+                    </td>
+                    <td class="text-left">
+                        {% for formation in categorie.formations %}
+                            {{ formation.title }}<br />
+                        {% endfor %}
+                    </td>
+                    <td>{# Condition pour réaliser la suppression d'une catégorie si elle ne contient aucune formation#}
+                            {% if categorie.formations|length == 0 %}
+                                <a href="{{ path('admin.categories.suppr', {id:categorie.id}) }}" class="btn btn-danger" onclick="return confirm('Etes-vous sûr de vouloir supprimer {{ categorie.name }} ?')">Supprimer</a>
+                            {% endif %}
+                    </td>
+                {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
