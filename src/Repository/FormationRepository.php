@@ -7,6 +7,7 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 define("FPUBLISHEDAT", "f.publishedAt");
+
 /**
  * @extends ServiceEntityRepository<Formation>
  *

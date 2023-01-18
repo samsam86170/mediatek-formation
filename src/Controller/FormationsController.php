@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 define("FORMATIONSPATH", "pages/formations.html.twig");
 
 /**
- * Controleur des formations
+ * Gère les routes de la page des formations
  *
  * @author emds
  */
@@ -30,12 +30,18 @@ class FormationsController extends AbstractController {
      */
     private $categorieRepository;
     
+    /**
+     * Création du constructeur
+     * @param FormationRepository $formationRepository
+     * @param CategorieRepository $categorieRepository
+     */
     function __construct(FormationRepository $formationRepository, CategorieRepository $categorieRepository) {
         $this->formationRepository = $formationRepository;
         $this->categorieRepository= $categorieRepository;
     }
     
     /**
+     * Création de la route vers la page des formations
      * @Route("/formations", name="formations")
      * @return Response
      */
@@ -49,6 +55,8 @@ class FormationsController extends AbstractController {
     }
 
     /**
+     * Tri les enregistrements selon le $champ et l'ordre
+     * Et sur le $champ et l'ordre si autre $table
      * @Route("/formations/tri/{champ}/{ordre}/{table}", name="formations.sort")
      * @param type $champ
      * @param type $ordre
@@ -70,6 +78,8 @@ class FormationsController extends AbstractController {
     }     
     
     /**
+     * Récupère les enregistrements selon le $champ et la $valeur
+     * Et selon le $champ et la $valeur si autre $table
      * @Route("/formations/recherche/{champ}/{table}", name="formations.findallcontain")
      * @param type $champ
      * @param Request $request
@@ -93,6 +103,7 @@ class FormationsController extends AbstractController {
     }  
     
     /**
+     * Récupère les enregistrements des formations individuelles
      * @Route("/formations/formation/{id}", name="formations.showone")
      * @param type $id
      * @return Response

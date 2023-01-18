@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Description of AdminPlaylistsController
+ * Gère les routes de la page d'administration des playlists
  *
  * @author samsam
  */
@@ -51,6 +51,7 @@ class AdminPlaylistsController extends AbstractController {
     
     
     /**
+     * Création de la route vers la page des playlists
      * @Route("/admin/playlists", name="admin.playlists")
      * @return Response
      */
@@ -97,6 +98,7 @@ class AdminPlaylistsController extends AbstractController {
     }
     
     /**
+     * Ajout d'une playlist
      * @Route("/admin/ajout.playlists", name="admin.ajout.playlists")
      * @param Request $request
      * @return Response
@@ -118,7 +120,7 @@ class AdminPlaylistsController extends AbstractController {
     }
     
     /**
-     * * Tri des enregistrements selon le nom des playlists
+     * Tri des enregistrements selon le nom des playlists
      * Ou selon le nombre de formations
      * @Route("/admin/playlists/tri/{champ}/{ordre}", name="admin.playlists.sort")
      * @param type $champ
@@ -142,8 +144,8 @@ class AdminPlaylistsController extends AbstractController {
     }
     
     /**
-     * Tri des enregistrements selon $champ $valeur
-     * Et si $table
+     * Récupère les enregistrements selon $champ $valeur
+     * Et selon le $champ et la $valeur si autre $table
      * @Route("/admin/playlists/recherche/{champ}/{table}", name="admin.playlists.findallcontain")
      * @param type $champ
      * @param Request $request

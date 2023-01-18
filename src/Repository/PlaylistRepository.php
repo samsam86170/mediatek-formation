@@ -102,8 +102,7 @@ class PlaylistRepository extends ServiceEntityRepository
             ->groupBy('p.id')                
             ->orderBy('p.name', 'ASC')
             ->getQuery()
-            ->getResult();
-        
+            ->getResult();     
     }
     
     /**
@@ -118,6 +117,5 @@ class PlaylistRepository extends ServiceEntityRepository
                 ->orderBy('count(p.name)', $ordre)                
                 ->getQuery()
                 ->getResult();       
-    }
-          
+    }      
 }
