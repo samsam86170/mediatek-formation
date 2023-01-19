@@ -11,7 +11,7 @@ jobs:
   - name: Sync files
     uses: SamKirkland/FTP-Deploy-Action@4.3.0
     with:
-      server: ftp://samzei-portfolio.com
+      server: samzei-portfolio.com
       server-dir: /public_html/
       username: u555127890.mediatek-formation-dhaussy.online
       password: ${{ secrets.ftp_password }}
