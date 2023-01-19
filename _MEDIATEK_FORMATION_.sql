@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : lun. 19 sep. 2022 à 12:26
--- Version du serveur :  5.7.31
--- Version de PHP : 7.4.9
+-- Hôte : 127.0.0.1:3308
+-- Généré le : jeu. 19 jan. 2023 à 00:45
+-- Version du serveur : 8.0.27
+-- Version de PHP : 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,15 +29,15 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS categorie;
 CREATE TABLE categorie (
-  id int(11) NOT NULL,
-  name varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  id int NOT NULL,
+  name varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table categorie
 --
 
-INSERT INTO categorie (id, `name`) VALUES
+INSERT INTO categorie (id, name) VALUES
 (1, 'Java'),
 (2, 'UML'),
 (3, 'C#'),
@@ -56,22 +56,23 @@ INSERT INTO categorie (id, `name`) VALUES
 
 DROP TABLE IF EXISTS doctrine_migration_versions;
 CREATE TABLE doctrine_migration_versions (
-  version varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  version varchar(191) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   executed_at datetime DEFAULT NULL,
-  execution_time int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  execution_time int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 --
 -- Déchargement des données de la table doctrine_migration_versions
 --
 
-INSERT INTO doctrine_migration_versions (`version`, executed_at, execution_time) VALUES
+INSERT INTO doctrine_migration_versions (version, executed_at, execution_time) VALUES
 ('DoctrineMigrations\\Version20220831122705', '2022-08-31 12:29:46', 298),
 ('DoctrineMigrations\\Version20220901133418', '2022-09-01 13:35:11', 75),
 ('DoctrineMigrations\\Version20220901142041', '2022-09-01 14:23:58', 447),
 ('DoctrineMigrations\\Version20220902060409', '2022-09-02 06:04:28', 72),
 ('DoctrineMigrations\\Version20220902061351', '2022-09-02 06:14:16', 303),
-('DoctrineMigrations\\Version20220904053453', '2022-09-04 05:36:24', 237);
+('DoctrineMigrations\\Version20220904053453', '2022-09-04 05:36:24', 237),
+('DoctrineMigrations\\Version20230116065311', '2023-01-16 06:54:05', 3026);
 
 -- --------------------------------------------------------
 
@@ -81,12 +82,12 @@ INSERT INTO doctrine_migration_versions (`version`, executed_at, execution_time)
 
 DROP TABLE IF EXISTS formation;
 CREATE TABLE formation (
-  id int(11) NOT NULL,
+  id int NOT NULL,
   published_at datetime DEFAULT NULL,
-  title varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  description longtext COLLATE utf8mb4_unicode_ci,
-  video_id varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  playlist_id int(11) DEFAULT NULL
+  title varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  description longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  video_id varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  playlist_id int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -94,7 +95,7 @@ CREATE TABLE formation (
 --
 
 INSERT INTO formation (id, published_at, title, description, video_id, playlist_id) VALUES
-(1, '2021-01-04 17:00:12', 'Eclipse n°8 : Déploiement', 'Exécution de l\'application en dehors de l\'IDE, en invite de commande.\nCréation d\'un ficher jar pour le déploiement de l\'application.\n00:20 : exécuter l\'application à partir d\'un invite de commandes\n04:41 : créer un fichier jar auto exécutable\n06:42 : exécuter un fichier jar directement\n07:09 : exécuter un fichier jar dans l\'invite de commande pour avoir les retours console', 'Z4yTTXka958', 1),
+(1, '2020-12-29 00:00:00', 'Eclipse n°8 : Déploiement', 'Exécution de l\'application en dehors de l\'IDE, en invite de commande.\r\nCréation d\'un ficher jar pour le déploiement de l\'application.\r\n00:20 : exécuter l\'application à partir d\'un invite de commandes\r\n04:41 : créer un fichier jar auto exécutable\r\n06:42 : exécuter un fichier jar directement\r\n07:09 : exécuter un fichier jar dans l\'invite de commande pour avoir les retours console', 'Z4yTTXka958', 1),
 (2, '2021-01-02 17:00:01', 'Eclipse n°7 : Tests unitaires', 'Intégration de JUnit dans l\'application et création de tests unitaires.\n00:07 : rappel sur le principe du test unitaire\n01:01 : intégrer JUnit au projet (une seule fois)\n01:52 : créer une classe de test\n03:49 : créer une méthode de test\n08:35 : lancer le test\n09:11 : créer une autre méthode de test pour tester la même méthode\n11:02 : relancer le test', '-nw42Xq6cYE', 1),
 (3, '2020-12-30 17:00:07', 'Eclipse n°6 : Documentation technique', 'Intégration des commentaires normalisés et génération automatique de la documentation technique\n00:08 : insérer des commentaires normalisés\n02:14 : générer documentation technique\n04:35 : repérer et corriger les erreurs et warnings\n06:58 : afficher la documentation technique', 'PrK_P3TKc00', 1),
 (4, '2020-12-29 17:00:00', 'Eclipse n°5 : Refactoring', 'Utilisation des outils de refactoring et de génération automatique de code.\n01:00 : refaire automatiquement les indentations\n01:25 : changer un nom (classe, méhode, propriété)\n04:04 : extraire une méthode\n06:19 : modifier la signature d\'une méthode\n09:23 : générer du code (constructeur, getter/setter)\n12:34 : encapsuler une propriété\n15:30 : extraire une interface', '1p_mKDDSMnQ', 1),
@@ -136,7 +137,7 @@ INSERT INTO formation (id, published_at, title, description, video_id, playlist_
 (41, '2019-10-03 08:35:56', 'Python n°2 : boucle for', 'Reprise de l\'exercice 1 en ajoutant le test de saisie et en utilisant la boucle \"for\" pour l\'affichage. Cela permet de voir la différence entre la boucle déterministe (for) et la boucle indéterministe (while).', 'elrR4GUpKEo', 3),
 (42, '2019-10-02 09:19:32', 'Python n°1 : boucle simple, saisie, affichage', 'Découverte des commentaires, de la saisie, de l\'affichage et de la boucle universelle (while) à travers un exemple qui permet d\'afficher une table de multiplication.', '4BFWagDB5aE', 3),
 (43, '2019-09-30 14:55:31', 'Python n°0 : installation de Python', 'Cette vidéo permet juste de montrer comment installer Python et faire un premier test de programme.\nLes vidéos qui vont suivre porteront sur la découverte de Python à travers des exercices progressifs.', 'ilx0fJ72Re4', 3),
-(44, '2019-09-29 13:06:14', 'Android Studio (complément n°13) : Permissions', 'Permettre de gérer les permissions directement dans l\'application. \nOn repart ici de l\'application de l\'envoi de sms (complément 4) pour ajouter la permission.\n\nPrérequis : avoir installé et configuré Android Studio (https://youtu.be/M6pi6jXpRrs).\n\nLien vers la vidéo \"Android complément 4 : envoi sms\" :\nhttps://youtu.be/UNBTFdbKymU\n\nRemarque :\n11:22 mon explication n\'est pas du tout claire. Ce numéro peut ensuite être utilisé pour distinguer les différentes permissions dans le cas où il y en a plusieurs. Ici ce n\'est pas utile, mais ça peut l\'être si on voulait gérer les informations retournées par la gestion de la permission (pour savoir quelle permission retourne une information).', 'mkI2yKiTS-4', 8),
+(44, '2019-09-30 00:00:00', 'Android Studio (complément n°13) : Permissions', 'Permettre de gérer les permissions directement dans l\'application. \r\nOn repart ici de l\'application de l\'envoi de sms (complément 4) pour ajouter la permission.\r\n\r\nPrérequis : avoir installé et configuré Android Studio (https://youtu.be/M6pi6jXpRrs).\r\n\r\nLien vers la vidéo \"Android complément 4 : envoi sms\" :\r\nhttps://youtu.be/UNBTFdbKymU\r\n\r\nRemarque :\r\n11:22 mon explication n\'est pas du tout claire. Ce numéro peut ensuite être utilisé pour distinguer les différentes permissions dans le cas où il y en a plusieurs. Ici ce n\'est pas utile, mais ça peut l\'être si on voulait gérer les informations retournées par la gestion de la permission (pour savoir quelle permission retourne une information).', 'mkI2yKiTS-4', 8),
 (45, '2019-09-17 13:49:02', 'Android Studio (complément n°12) : Positionner texte sur photo', 'A partir d\'une application Android, positionner un texte sur une image et l\'enregistrer dans l\'image.\nMême si cette vidéo est indépendante, elle suit la logique de la vidéo \"Android Studio (complément n°9) : Ajout texte sur photo\". Dans cette vidéo précédente, l\'ajout se faisait avec une position fixe : https://youtu.be/kanbIK-Jf3A\n\nPrérequis : avoir installé et configuré Android Studio (https://youtu.be/M6pi6jXpRrs).\n\nLien vers les vidéos qui permettent de gérer les photos :\n\"Android Studio (complément n°5) : Récupérer les photos du mobile\" : https://youtu.be/M9JUdmx5OW4\n\"Android Studio (complément n°6) : Redimensionner des photos\" : https://youtu.be/ChqpJJKcaZU\n\"Android Studio (complément n°7) : Prendre une photo\" : https://youtu.be/8890GpBwn9w\n\"Android Studio (complément n°8) : Enregistrer une photo\" : https://youtu.be/YCnHHrR1luA\n\"Android Studio (complément n°9) : Ajout texte sur photo\" : https://youtu.be/kanbIK-Jf3A\n\"Android Studio (complément n°11) : Transformer une image en texte\" : https://youtu.be/7Xm8GROWpX0', '3IyrvQJCxVo', 8),
 (46, '2019-05-22 15:41:47', 'Sujet E5 SLAM 2019 : cas RESTILOC mission4 (calcul et comparatif)', 'Correction commentée de la mission 4 du sujet SLAM RESTILOC tombé en métropole en mai 2019 (partie SI7 : calcul et comparatif).\r\nERRATUM :\r\nAu temps 19:22, j\'ai écrit un très moche \"majorativement \" ua lieu de \"majoritairement\". Désolée !', 'mBeZLsIwzkQ', 4),
 (47, '2019-05-22 11:00:36', 'Sujet E5 SLAM 2019 : cas RESTILOC mission3 (SQL et Android)', 'Correction commentée de la mission 3 du sujet SLAM RESTILOC tombé en métropole en mai 2019 (partie SQL et programmation mobile).', 'VCFkJRfVyYo', 4),
@@ -180,7 +181,7 @@ INSERT INTO formation (id, published_at, title, description, video_id, playlist_
 (85, '2018-08-17 07:19:08', 'Android Studio (complément n°4) : Envoyer un SMS', 'Coder l\'envoi d\'un SMS vers n\'importe quel smartphone, à partir d\'une application Android.\r\nPrérequis : avoir installé et configuré Android Studio (sinon, visionner la vidéo du TP1 Android : https://youtu.be/M6pi6jXpRrs).\r\n(petite erreur : le numéro de mobile fictif saisi à la fin est un peu trop long... ceci dit, ça ne change rien aux explications)', 'UNBTFdbKymU', 8),
 (86, '2018-08-06 21:43:36', 'Android Studio (complément n°3) : Activity dépendante', 'Apprendre à créer des activity dépendantes (revenir à l\'activity parent par la flèche du haut).\r\nPrérequis : avoir installé et configuré Android Studio.', '2n3bGqiaWMs', 8),
 (88, '2018-07-26 19:10:11', 'Android Studio (complément n°2) : Récupérer les contacts du mobile', 'Apprendre à récupérer les contacts présents dans le mobile.\r\nPrérequis : avoir installé et configuré Android Studio (voir 1e vidéo du TP Android : https://youtu.be/M6pi6jXpRrs)', '4lT0pnyzkSA', 8),
-(89, '2018-07-09 19:56:31', 'Android Studio (complément n°1) : Navigation Drawer et Fragment', 'Apprendre à créer une navigation type drawer (menu qui apparaît à gauche) et y intégrer des fragments (pour l\'affichage des différentes pages). Apprendre à insérer une Activity existante dans un fragment.\r\nPrérequis : avoir installé et configuré Android Studio (voir 1e vidéo du TP Android : https://youtu.be/M6pi6jXpRrs)', 'rUnuYTjaBoU', 8),
+(89, '2018-07-14 00:00:00', 'Android Studio (complément n°1) : Navigation Drawer et Fragment', 'Apprendre à créer une navigation type drawer (menu qui apparaît à gauche) et y intégrer des fragments (pour l\'affichage des différentes pages). Apprendre à insérer une Activity existante dans un fragment.\r\nPrérequis : avoir installé et configuré Android Studio (voir 1e vidéo du TP Android : https://youtu.be/M6pi6jXpRrs)', 'rUnuYTjaBoU', 3),
 (90, '2018-05-13 20:52:36', 'Sujet E5 SLAM 2017 : cas DANE mission4 (et quelques annonces)', 'Correction commentée de la mission 4 du sujet SLAM 2017 DANE tombé à Nouméa en novembre 2017 (partie analyse).\r\nPlusieurs questions de \"bon sens\" puis un schéma assez classique.', 'gmZYXP3hPts', 9),
 (91, '2018-05-11 16:58:14', 'Sujet E5 SLAM 2017 : cas DANE mission3', 'Correction commentée de la mission 3 du sujet SLAM 2017 DANE tombé à Nouméa en novembre 2017 (partie objet).\r\n1e question très simple.\r\n2e question nettement plus complexe car il fallait bien comprendre le fonctionnement des classes et l\'utilisation des dictionnaires.\r\n3e question (une erreur à trouver), dont le résultat est très simple mais pas forcément évident à trouver.', 'cZ1WR3f39xY', 9),
 (92, '2018-05-11 09:20:20', 'Sujet E5 SLAM 2017 : cas DANE mission2', 'Correction commentée de la mission 2 du sujet SLAM 2017 DANE tombé à Nouméa en novembre 2017 (partie web : PHP, Javascript, MySQL...).\r\nUn dossier déstabilisant car donnant l\'impression qu\'il faut certaines connaissances techniques (jquery, json...) alors que ce n\'est pas du tout le cas. Les réponses au final sont très simples. Vous allez voir comment aborder ce genre de mission.', 'OOaMlhFca6o', 9),
@@ -342,8 +343,8 @@ INSERT INTO formation (id, published_at, title, description, video_id, playlist_
 
 DROP TABLE IF EXISTS formation_categorie;
 CREATE TABLE formation_categorie (
-  formation_id int(11) NOT NULL,
-  categorie_id int(11) NOT NULL
+  formation_id int NOT NULL,
+  categorie_id int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -444,7 +445,8 @@ INSERT INTO formation_categorie (formation_id, categorie_id) VALUES
 (85, 6),
 (86, 6),
 (88, 6),
-(89, 6),
+(89, 1),
+(89, 2),
 (98, 6),
 (99, 6),
 (100, 6),
@@ -637,10 +639,10 @@ INSERT INTO formation_categorie (formation_id, categorie_id) VALUES
 
 DROP TABLE IF EXISTS messenger_messages;
 CREATE TABLE messenger_messages (
-  id bigint(20) NOT NULL,
-  body longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  headers longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  queue_name varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  id bigint NOT NULL,
+  body longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  headers longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  queue_name varchar(190) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   created_at datetime NOT NULL,
   available_at datetime NOT NULL,
   delivered_at datetime DEFAULT NULL
@@ -654,16 +656,16 @@ CREATE TABLE messenger_messages (
 
 DROP TABLE IF EXISTS playlist;
 CREATE TABLE playlist (
-  id int(11) NOT NULL,
-  name varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  description longtext COLLATE utf8mb4_unicode_ci
+  id int NOT NULL,
+  name varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  description longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table playlist
 --
 
-INSERT INTO playlist (id, `name`, description) VALUES
+INSERT INTO playlist (id, name, description) VALUES
 (1, 'Eclipse et Java', 'Utilisation de l\'IDE Eclipse et développement en Java.'),
 (2, 'Visual Studio 2019 et C#', 'Plusieurs vidéos portant sur différents aspects de Visual Studio :\r\nProgrammation en C# (événementiel, objet, diverses astuces) et configuration (lien avec Github...).'),
 (3, 'Programmation sous Python', 'Exercices progressifs pour apprendre à programmer sous Python.'),
@@ -676,11 +678,11 @@ INSERT INTO playlist (id, `name`, description) VALUES
 (10, 'Sujet E5 SLAM 2017 métropole : cas AHM-23', 'Correction commentée des 4 missions (1 vidéo par mission).'),
 (11, 'TP Android (programmation mobile)\r\n', 'Réaliser une application Android complète (8h12mn)\r\n(installation et configuration d\'Android Studio, construction d\'une application MVC, construction d\'une interface, sauvegarde par sérialisation, sauvegarde dans une base locale SQLite, sauvegarde dans une base distante MySQL, multi-interfaces, listes adapters interactives)\r\n\r\nprérequis : avoir des connaissances en Java et en programmation objet\r\nlangage : Java \r\nIDE : Android Studio'),
 (12, 'POO TP Java', 'Ces vidéos vont permettre de créer étape par étape un TP en Java sous Eclipse, pour mettre en pratique les connaissances en programmation objet (normalement acquises avec la playlist du cours \"programmation objet\").\r\nCe TP va vous permettre de mieux comprendre assez rapidement plusieurs notions importantes en objet : vous allez travailler en MVC, utiliser une classe interface, des méthodes abstraites, des notions comme le polymorphisme, etc.'),
-(13, 'Bases de la programmation (C#)', 'Exemples progressifs de programmes en procédural, événementiel et objet sous Visual Studio (version Entreprise 2017).\r\nPrérequis : aucun\r\n\r\n1ère partie : programmation procédurale en mode console (non graphique)\r\nn°1 à 30 : procédural, notions élémentaires (variables, saisie/affichage, affectations/calculs, alternatives (if/switch), itérations (while/do-while/for))\r\nn°31 à 42 : procédural, tableaux (1 et 2 dimensions, manipulations, tris, recherches)\r\nn°43 à 59 : procédural, modules et paramètres (procédures et fonctions)\r\n\r\n2ème partie : événementiel (en mode graphique)\r\nn°60 à 67 : événementiel (programmation graphique)\r\n\r\n3ème partie : initiation à l\'objet\r\nn°68 à 74 : notions de base en programmation objet sur des classes \"métier\"'),
+(13, 'Bases de la programmation (C#)', 'TESTl Studio (version Entreprise 2017).\r\nPrérequis : aucun\r\n\r\n1ère partie : programmation procédurale en mode console (non graphique)\r\nn°1 à 30 : procédural, notions élémentaires (variables, saisie/affichage, affectations/calculs, alternatives (if/switch), itérations (while/do-while/for))\r\nn°31 à 42 : procédural, tableaux (1 et 2 dimensions, manipulations, tris, recherches)\r\nn°43 à 59 : procédural, modules et paramètres (procédures et fonctions)\r\n\r\n2ème partie : événementiel (en mode graphique)\r\nn°60 à 67 : événementiel (programmation graphique)\r\n\r\n3ème partie : initiation à l\'objet\r\nn°68 à 74 : notions de base en programmation objet sur des classes \"métier\"'),
 (14, 'Exercices triggers, sql et correctifs (sujets EDC BTS SIO)', 'Prérequis : avoir vu le cours triggers (et mcd)\r\nBut : Présenter comment traiter les parties triggers, sql et correctifs d\'un sujet de BTS SIO'),
 (15, 'Exercices objet (sujets EDC BTS SIO)', 'Prérequis : avoir vu le cours (playlist) objet\r\nBut : Présenter comment traiter la partie objet d\'un sujet de BTS SIO'),
 (16, 'MCD exercices d\'examen (sujets EDC BTS SIO)', 'Prérequis : avoir vu les cours \"Modèle relationnel et MCD\"\r\nhttps://youtu.be/VFHVNA8xgK0\r\net le cours Merise/2\r\nhttps://youtu.be/smTFM4GCEgc\r\nBut : Présenter comment traiter la partie conception de données de sujets de BTS SIO'),
-(17, 'Cours Composant logiciel', 'Cours Composant logiciel (26mn)\r\nPrérequis : aucun\r\nBut : présenter succinctement la notion de composant logiciel et en exemple le web service\r\nLe cours est constitué de 14 diapos, découpées en 2 vidéos (durée totale 26mn) :\r\n1-10 : notion de composant logiciel\r\n11-14 : web service\r\n\r\nLien vers le pdf du cours :\r\nhttp://bit.ly/EmdsComposants_logiciels\r\n'),
+(17, 'Cours Composant logiciel', 'Cours Composant logiciel (26mn)\r\nPrérequis : aucun\r\nBut : présenter succinctement la notion de composant logiciel et en exemple le web service\r\nLe cours est constitué de 14 diapos, découpées en 2 vidéos (durée totale 26mn) :\r\n1-10 : notion de composant logiciel\r\n11-14 : web service\r\n\r\nLien vers le pdf du cours :\r\nhttp://bit.ly/EmdsComposants_logiciels'),
 (18, 'Cours MCD MLD MPD', 'Cours MCD MLD MPD (28mn) :\r\nPrérequis : connaissances en MCD\r\nBut : montrer comment passer du MCD au MLD puis MPD pour créer la base de données\r\nLe cours est constitué de 19 diapos, découpées en 2 vidéos (durée totale 28mn) :\r\n1-9 : introduction, entités, associations, héritage, contraintes\r\n10-19 : exercices\r\n\r\nLien vers le pdf du cours :\r\nhttp://bit.ly/EmdsMCD_MLD_MPD\r\n'),
 (19, 'Cours MCD vs Diagramme de classes', 'Cours MCD vs Diagramme de classes (26mn) :\r\nPrérequis : connaissances en MCD et Diagramme de classes\r\nBut : montrer comment passer du MCD au Diagramme de classes\r\nLe cours est constitué de 20 diapos, découpées en 2 vidéos (durée totale 26mn) :\r\n1-11 : introduction, entités, associations\r\n12-20 : héritage, contraintes, exercices\r\n\r\nLien vers le pdf du cours :\r\nhttp://bit.ly/EmdsMCD_vs_UML\r\n'),
 (20, 'Cours Transactions et verrou', 'Cours Transactions et verrous (32mn)\r\n\r\nPrérequis : connaissances basiques en SQL\r\nBut : présentation des transactions sql et de leur niveau d\'isolement, ainsi que des verrous explicites (programmation dans un SGBDR)\r\nLe cours est constitué de 17 diapos, découpées en 3 vidéos (durée totale 32mn) :\r\n1-6 : transactions\r\n7-13 : verrous et problèmes d\'accès\r\n14-17 : risques sur les verrous et cas d\'utilisation\r\n\r\nlien vers le pdf du cours :\r\nhttp://bit.ly/EmdsTransactions_verrous\r\n'),
@@ -690,7 +692,30 @@ INSERT INTO playlist (id, `name`, description) VALUES
 (24, 'Cours UML', 'Cours UML (57mn)\r\nPrérequis : connaissances en objet \r\nBut : notions globales du langage de modélisation UML\r\nLe cours est constitué de 33 diapos, découpées en 6 vidéos (durée totale 57mn) :\r\n1-7 : introduction et cas d\'utilisation\r\n8-11 : diagramme de classes\r\n12-15 : diagramme d\'états\r\n16-18 : diagramme de séquences\r\n19-24 : autres diagrammes\r\n25-33 : exercices\r\n\r\nlien vers le pdf du cours :\r\nhttp://bit.ly/EmdsUML'),
 (25, 'Cours Merise/2', 'La playlist contient :\r\n- la nouvelle version du cours en une seule vidéo\r\n\r\nLien vers le pdf du cours :\r\nhttp://bit.ly/EmdsMerise2'),
 (26, 'Cours Modèle relationnel et MCD', 'La playlist contient :\r\n- la nouvelle version du cours en une seule vidéo (1h08)\r\n\r\nLien vers le pdf du cours :\r\nhttp://bit.ly/EmdsMCD'),
-(27, 'Cours de programmation objet', 'La playlist contient :\r\n- la nouvelle version du cours en une seule vidéo\r\n\r\nLien vers le pdf du cours :\r\nhttp://bit.ly/EmdsObjet');
+(27, 'Cours de programmation objet', 'La playlist contient :\r\n- la nouvelle version du cours en une seule vidéo\r\n\r\nLien vers le pdf du cours :\r\nhttp://bit.ly/EmdsObjet'),
+(28, 'Android', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table user
+--
+
+DROP TABLE IF EXISTS user;
+CREATE TABLE `user` (
+  id int NOT NULL,
+  email varchar(180) COLLATE utf8mb4_unicode_ci NOT NULL,
+  roles json NOT NULL,
+  password varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  keycloak_id varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table user
+--
+
+INSERT INTO user (id, email, roles, password, keycloak_id) VALUES
+(1, 'samsamsamsam@gmail.com', '[\"ROLE_ADMIN\"]', '', '77020f9e-e24d-499b-9ec6-630546696d67');
 
 --
 -- Index pour les tables déchargées
@@ -739,6 +764,13 @@ ALTER TABLE playlist
   ADD PRIMARY KEY (id);
 
 --
+-- Index pour la table user
+--
+ALTER TABLE user
+  ADD PRIMARY KEY (id),
+  ADD UNIQUE KEY UNIQ_8D93D649E7927C74 (email);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -746,25 +778,31 @@ ALTER TABLE playlist
 -- AUTO_INCREMENT pour la table categorie
 --
 ALTER TABLE categorie
-  MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT pour la table formation
 --
 ALTER TABLE formation
-  MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=241;
+  MODIFY id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=255;
 
 --
 -- AUTO_INCREMENT pour la table messenger_messages
 --
 ALTER TABLE messenger_messages
-  MODIFY id bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY id bigint NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table playlist
 --
 ALTER TABLE playlist
-  MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT pour la table user
+--
+ALTER TABLE user
+  MODIFY id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Contraintes pour les tables déchargées
